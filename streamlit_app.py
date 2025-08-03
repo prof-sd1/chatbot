@@ -45,20 +45,20 @@ def extract_text_from_image(image):
 # ChatBot using OpenAI API
 # -----------------------------
 def chat_with_openai(prompt, chat_history):
+def chat_with_openai(prompt, chat_history):
     messages = [{"role": "system", "content": "You are a helpful legal assistant."}]
     for q, a in chat_history:
         messages.append({"role": "user", "content": q})
         messages.append({"role": "assistant", "content": a})
     messages.append({"role": "user", "content": prompt})
 
-    response = openai.ChatCompletion.create(
-        model="gpt-3.5-turbo",  # or gpt-4 if available
+    response = openai.chat.completions.create(
+        model="gpt-3.5-turbo",
         messages=messages,
         temperature=0.3,
-        max_tokens=500
+        max_tokens=500,
     )
-    return response.choices[0].message["content"].strip()
-
+    return response.choices[0].message.content.strip()
 # -----------------------------
 # Main File Handling
 # -----------------------------
