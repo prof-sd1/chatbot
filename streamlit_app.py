@@ -11,7 +11,7 @@ import re
 # ----------------------------------
 # Configure your OpenAI API Key
 # ----------------------------------
-openai.api_key = "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"
+openai.api_key = "api"
 
 st.set_page_config(page_title="LegalEase AI Assistant", layout="wide")
 st.title("📘 LegalEase AI Assistant")
