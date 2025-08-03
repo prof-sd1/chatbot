@@ -45,7 +45,6 @@ def extract_text_from_image(image):
 # ChatBot using OpenAI API
 # -----------------------------
 def chat_with_openai(prompt, chat_history):
-def chat_with_openai(prompt, chat_history):
     messages = [{"role": "system", "content": "You are a helpful legal assistant."}]
     for q, a in chat_history:
         messages.append({"role": "user", "content": q})
