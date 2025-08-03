@@ -1,2 +1,7 @@
 streamlit
 openai
+python-docx
+pytesseract
+Pillow
+PyMuPDF
+numpy
